@@ -1,5 +1,12 @@
 This is an example of cherry picking in git.
 We are checking whether cherry-picking works smoothly even as files are renamed.
+
+Actually, it turned out that renaming did not work smoothly, because
+git sees a rename as nothing but a delete and an add, so it does not
+know that the files should share history.  But we can at least
+demonstrate that cherry picking allows backporting of bug fixes from a
+feature branch onto a main branch before releasing the feature!
+
 Line 2
 Line 3 (bugfix applied)
 Line 4
